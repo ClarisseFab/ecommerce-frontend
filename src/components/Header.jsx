@@ -1,5 +1,6 @@
 import '../App.css';
 import backgroundImage from '../assets/backgroundImage.jpg'
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -11,13 +12,13 @@ function Header() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">Nos randonnées</a>
+                            <Link className="nav-link" to="/products">Toutes les randonnées</Link>
                         </li>
                          <li className="nav-item">
-                            <a className="nav-link" href="#">Mes randos pref</a>
+                            <Link className="nav-link" to="/wishlists">Mes randos pref</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Mon panier</a>
+                            <Link className="nav-link" to="/shopping_carts">Mon panier</Link>
                         </li>
                     </ul>
                 </div>

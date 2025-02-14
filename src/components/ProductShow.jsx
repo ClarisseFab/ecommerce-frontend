@@ -48,6 +48,27 @@ function ProductShow() {
       });
       }
 
+      const wishlistOptions = {
+        method: 'POST',
+        redirect: 'follow',
+        headers: {
+            "Content-Type": "application/json",
+            'X-User-Email': process.env.REACT_APP_USER_EMAIL,
+            'X-User-Token': process.env.REACT_APP_USER_TOKEN
+        },
+        body: JSON.stringify({product_id: id})
+      };
+
+      const addToWishlist = () => {
+        fetch(`${apiUrl}/wishlists`, wishlistOptions)
+          .then(response => response.json())
+          .then(function(data) {
+      })
+          .catch(function() {
+              
+      });
+      };
+
       return (
         loading ? (
             <p>Votre randonnée arrive !</p>
@@ -58,8 +79,8 @@ function ProductShow() {
                 <h2>Détails</h2>
                 <p>Difficulté : {product.difficulty}</p>
                 <p>Durée : {product.duration} jours</p>
-                <button className="btn btn-primary" onClick={addToCart}>Je réserve cette rando</button>
-                <button className="btn btn-primary">J'ajoute cette rando à mes favoris</button>
+                <button className="btn btn-primary" onClick={() => addToCart()}>Je réserve cette rando</button>
+                <button className="btn btn-primary" onClick={() => addToWishlist()}>J'ajoute cette rando à mes favoris</button>
             </div>
         )
     );
