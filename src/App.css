@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,73 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* Header  */
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.header {
+  background-image: url('./assets/backgroundImage.jpg'); /* Chemin vers l'image */
+  background-size: cover;
+  background-position: center;
+  height: 550px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* ProductList Css */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 64px;
+}
+
+/* ProductCard Css */
+.card-container {
+  width: 300px; 
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-container .card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-container > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-container h2 {
+  font-size: 21px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-container p {
+  font-size: 14px;
+  color: grey;
+  margin: 0;
+  text-transform: uppercase;
 }
