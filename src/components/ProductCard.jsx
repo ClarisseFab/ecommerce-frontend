@@ -1,9 +1,9 @@
 import '../App.css';
 
-function ProductCard({name, price, duration, period}) {
+function ProductCard({name, price, duration, period, photo}) {
     return (
-      <div className="card-container">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+      <div className="card-container rounded">
+            <img src={`http://localhost:3000${photo}`} />
             <div className="card-infos">
                 <div>
                 <h2>{name}</h2>

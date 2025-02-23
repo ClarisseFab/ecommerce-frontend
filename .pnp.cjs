@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@heroicons/react", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:2.2.0"],\
           ["@testing-library/jest-dom", "npm:5.17.0"],\
           ["@testing-library/react", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:13.4.0"],\
           ["@testing-library/user-event", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:13.5.0"],\
@@ -35,6 +36,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:19.0.0"],\
           ["react-router-dom", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:7.1.5"],\
           ["react-scripts", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:5.0.1"],\
+          ["react-toastify", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:11.0.3"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
         "linkType": "SOFT"\
@@ -3510,6 +3512,28 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@heroicons/react", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "../../../../.yarn/berry/cache/@heroicons-react-npm-2.2.0-775299dcc0-10c0.zip/node_modules/@heroicons/react/",\
+        "packageDependencies": [\
+          ["@heroicons/react", "npm:2.2.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:2.2.0", {\
+        "packageLocation": "./.yarn/__virtual__/@heroicons-react-virtual-8e56001203/5/.yarn/berry/cache/@heroicons-react-npm-2.2.0-775299dcc0-10c0.zip/node_modules/@heroicons/react/",\
+        "packageDependencies": [\
+          ["@heroicons/react", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:2.2.0"],\
+          ["@types/react", null],\
+          ["react", "npm:19.0.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@humanwhocodes/config-array", [\
       ["npm:0.13.0", {\
         "packageLocation": "../../../../.yarn/berry/cache/@humanwhocodes-config-array-npm-0.13.0-843095a032-10c0.zip/node_modules/@humanwhocodes/config-array/",\
@@ -6860,6 +6884,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["clsx", [\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../../../.yarn/berry/cache/clsx-npm-2.1.1-96125b98be-10c0.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["co", [\
       ["npm:4.6.0", {\
         "packageLocation": "../../../../.yarn/berry/cache/co-npm-4.6.0-03f2d1feb6-10c0.zip/node_modules/co/",\
@@ -8120,6 +8153,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["ecommerce-frontend", "workspace:."],\
+          ["@heroicons/react", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:2.2.0"],\
           ["@testing-library/jest-dom", "npm:5.17.0"],\
           ["@testing-library/react", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:13.4.0"],\
           ["@testing-library/user-event", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:13.5.0"],\
@@ -8128,6 +8162,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:19.0.0"],\
           ["react-router-dom", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:7.1.5"],\
           ["react-scripts", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:5.0.1"],\
+          ["react-toastify", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:11.0.3"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
         "linkType": "SOFT"\
@@ -15467,6 +15502,33 @@ const RAW_RUNTIME_STATE =
           "@types/typescript",\
           "react",\
           "typescript"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-toastify", [\
+      ["npm:11.0.3", {\
+        "packageLocation": "../../../../.yarn/berry/cache/react-toastify-npm-11.0.3-5761bfcbb6-10c0.zip/node_modules/react-toastify/",\
+        "packageDependencies": [\
+          ["react-toastify", "npm:11.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:11.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/react-toastify-virtual-50044f0f77/5/.yarn/berry/cache/react-toastify-npm-11.0.3-5761bfcbb6-10c0.zip/node_modules/react-toastify/",\
+        "packageDependencies": [\
+          ["react-toastify", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:11.0.3"],\
+          ["@types/react", null],\
+          ["@types/react-dom", null],\
+          ["clsx", "npm:2.1.1"],\
+          ["react", "npm:19.0.0"],\
+          ["react-dom", "virtual:7905de205318049bcf9f04fd2632d276e311eabcf959ba876dbc0d7d79283a89c2eb6a2e0bf61b10ccdf5eed7b7dc5d338e12da355618fbd471355570f31c107#npm:19.0.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\

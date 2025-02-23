@@ -30,11 +30,14 @@ function Orders() {
 
     return (
       <div className="order">
-           <h1>Mes commandes passées</h1>
            <ul>
             {
                 orders.map(order => (
-                    <li key={order.id}>le {order.date}: {order.total_price}€  </li>
+                    <div key={order.id}>
+                        <h5>Le {order.date}:</h5>
+                        <p>{}</p>
+                        <p className='d-flex justify-content-between'>{order.total_price}€ <span className='border rounded bg-success p-1 text-white'>Payé</span> </p>
+                    </div>
                 )
                 )
             }

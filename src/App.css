@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+
 /* .App {
   text-align: center;
 }
@@ -37,10 +39,22 @@
   }
 } */
 
+/* App utilities */
+.empty {
+  margin-left: 129px;
+  margin-top: 16px;
+  width: 650px;
+}
+
+ul {
+  list-style-type: none;
+}
+
 /* Header  */
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  width: 800px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -60,11 +74,61 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  gap: 24px;
+  color: #1C1C1D;
+}
+
+.header-title, h1 {
+  font-family: "Playwrite IT Moderna", serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Playwrite IT Moderna", serif;
+  font-weight: 100;
+}
+
+/* Footer */
+
+.footer-basic {
+  padding:16px 0;
+  background-color: rgb(255, 253, 253);
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:12px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
 }
 
 /* ProductList Css */
-.product-list {
+.product-list, .wishlist-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
@@ -73,10 +137,16 @@
 
 /* ProductCard Css */
 .card-container {
-  width: 300px; 
+  width: 350px; 
+  height: 350px; 
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.card-container:hover {
+  background: rgb(231, 231, 231);
 }
 
 .card-container .card-infos {
@@ -97,6 +167,7 @@
   font-size: 21px;
   font-weight: bold;
   margin: 0;
+  color: rgb(64, 63, 63);
 }
 
 .card-container p {
@@ -104,4 +175,123 @@
   color: grey;
   margin: 0;
   text-transform: uppercase;
+}
+
+/* ProductShow */
+.product-show {
+  width: 80%;
+  text-wrap: balance;
+}
+
+.details{
+  margin-bottom: 3px;
+}
+
+.img-container{
+  width: 50%; 
+}
+
+.img-container img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 30px;
+}
+
+.price-card {
+  display: inline-block;
+  padding: 10px 20px; /* Espacement autour du texte */
+  background-color: #f0f0f0; /* Couleur de fond de l'étiquette */
+  border-radius: 12px; /* Coins arrondis */
+  border: 2px solid #ccc; /* Bordure fine */
+  font-weight: bold; /* Pour avoir un texte plus marqué */
+  font-size: 16px; /* Taille du texte */
+}
+
+.price-card p {
+  margin: 0; /* Pour supprimer les marges par défaut autour du paragraphe */
+  color: #333; /* Couleur du texte */
+}
+
+.btn-book {
+  display: inline-block;
+  padding: 10px 20px; /* Espacement interne */
+  background-color: #0B623B; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  font-size: 16px; /* Taille du texte */
+  font-weight: bold; /* Gras pour le texte */
+  text-align: center; /* Centrer le texte */
+  text-decoration: none; /* Retirer le souligné */
+  border-radius: 5px; /* Coins arrondis */
+  border: none; /* Pas de bordure */
+  cursor: pointer; /* Curseur pointer pour l'interactivité */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
+}
+
+.btn-book:hover {
+  background-color: #128752; /* Couleur de fond au survol */
+  transform: scale(1.05); /* Effet d'agrandissement léger au survol */
+}
+
+.btn-wish {
+  background-color: transparent; /* Pas de fond par défaut */
+  border: none; /* Aucune bordure */
+  padding: 10px; /* Espacement autour de l'icône */
+  cursor: pointer; /* Curseur pointer pour indiquer l'interactivité */
+  display: inline-flex; /* Pour aligner l'icône */
+  justify-content: center; /* Centrer l'icône */
+  align-items: center; /* Centrer l'icône */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animation pour agrandissement et changement de couleur */
+}
+
+.btn-wish:hover {
+  transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+}
+
+.icon-heart {
+  fill: none; /* Couleur de l'icône par défaut */
+  transition: fill 0.3s ease; /* Animation de la couleur au survol */
+  width: 24px;
+  height: 24px;
+}
+
+.btn-wish:hover .icon-heart {
+  fill: #ff4081; /* Change la couleur de l'icône au survol */
+}
+
+
+/* Wishlist */
+.wishlist-content {
+  width: 650px; 
+}
+
+.wishlist-title {
+  margin-left: 129px;
+}
+
+/* Wishlist Card  */
+.card-container-without-photo {
+  width: 300px; 
+  height: 80px; 
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* ShoppingCard */
+.order-btn {
+  margin-left: 129px;
+}
+
+/* Icons */
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.icon-large {
+  width: 42px;
+  height: 42px;
+  margin-right: 8px;
 }

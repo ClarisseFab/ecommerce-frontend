@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
+import WishListCard from './WishlistCard';
+import { HeartIcon, TrashIcon} from '@heroicons/react/24/outline';
 
 function WishList() {
 
@@ -53,24 +55,25 @@ function WishList() {
     };
 
     return (
-      wishlists.length === 0 ? (
-        <p>Vous n'avez pas de randonnées préférées</p>
-      ) : (
-      <div className="wishlist">
-           <h1>Mes randonnées préférées</h1>
-           <ul>
-            {
-                wishlists.map(wishlist => (
-                    <li key={wishlist.id}>
-                        {wishlist.product.name} : {wishlist.product.price}€ 
-                        <button type="button" onClick={() => deleteWish(wishlist.id)}>X</button>
-                    </li>
-                )
-                )
-            }
-           </ul>
-      </div>
-      )
+        <div className="pt-3 bg-secondary-subtle" style={{ height: '500px' }}>
+            <h1 className='wishlist-title'>Mes randonnées préférées <HeartIcon className="icon-large"></HeartIcon></h1>
+            {wishlists.length === 0 ? (
+                <p className='empty fst-italic'>Vous n'avez pas encore de randonnées préférées, n'hésitez pas à laisser libre cours à vos rêves...</p>
+            ) : (
+                <>
+                    <ul className="wishlist-content m-auto p-2 wishlist-list ">
+                        {
+                            wishlists.map(wishlist => (
+                                <div key={wishlist.id} className='text-center mb-2'>
+                                    <WishListCard name={wishlist.product.name} price={wishlist.product.price} photo={wishlist.product.photo}></WishListCard>
+                                    <button type="button" className="btn btn-outline-dark" onClick={() => deleteWish(wishlist.id)}><TrashIcon className="icon"/></button>
+                                </div>
+                            ))
+                        }
+                    </ul>
+                </>
+            )}
+        </div>
     );
   }
   
