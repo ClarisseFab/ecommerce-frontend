@@ -14,7 +14,7 @@ function ShoppingCart({shoppingCarts, totalPrice, handleOrder, deleteCart}) {
                                    
                             <div className='d-flex gap-3 align-items-center'>
                                 <p className='mb-0'> <strong>{shoppingCart.product.quantity || 1}</strong></p>
-                                <button type="button"  className="btn btn-outline-dark p-1" onClick={() => deleteCart(shoppingCart.id)}><TrashIcon className="icon"/></button>
+                                <button type="button"  className="btn btn-outline-dark p-1" onClick={() => deleteCart(shoppingCart.id)}><TrashIcon className="icon-trash"/></button>
                              </div>
                             <p><strong>{shoppingCart.product.price}€ </strong></p>
                         </li>

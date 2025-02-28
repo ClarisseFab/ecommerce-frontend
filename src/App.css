@@ -276,6 +276,11 @@ p, li {
   margin-right: 8px;
 }
 
+.icon-trash {
+  width: 24px;
+  height: 24px;
+}
+
 .icon-large {
   width: 42px;
   height: 42px;

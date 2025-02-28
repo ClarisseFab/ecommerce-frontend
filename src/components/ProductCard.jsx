@@ -22,7 +22,7 @@ function ProductCard({name, price, duration, period, photo, quantity, deleteWish
                 )}
               </div>
               {deleteWish && (
-              <div className='d-flex justify-content-end p-2'><button type="button" className="btn btn-outline-dark text-right" onClick={deleteWish} ><TrashIcon className="icon"/></button></div>
+              <div className='d-flex justify-content-end p-2'><button type="button" className="btn btn-outline-dark text-right" onClick={deleteWish} ><TrashIcon className="icon-trash"/></button></div>
               )}
         </div>
     );
