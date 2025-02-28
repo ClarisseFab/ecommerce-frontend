@@ -1,3 +1,5 @@
+import { TrashIcon} from '@heroicons/react/24/outline';
+
 function WishListCard({name, price, photo, quantity}) {
     const containerClass = photo ? "card-container" : "card-container-without-photo";
 
@@ -14,6 +16,7 @@ function WishListCard({name, price, photo, quantity}) {
                     <p className="card-pricing">{quantity}</p>
                 )}
               </div>
+              <button type="button" className="btn btn-outline-dark" onClick={() => deleteWish(wishlist.id)}><TrashIcon className="icon"/></button>
         </div>
       );
 }

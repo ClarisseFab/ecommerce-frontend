@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
-import WishListCard from './WishlistCard';
 import { HeartIcon, TrashIcon} from '@heroicons/react/24/outline';
+import ProductCard from './ProductCard';
 
 function WishList() {
 
@@ -55,18 +55,18 @@ function WishList() {
     };
 
     return (
-        <div className="pt-3 bg-secondary-subtle" style={{ height: '500px' }}>
+        <div className="pt-3 bg-secondary-subtle" style={{ height: '1000px' }}>
             <h1 className='wishlist-title'>Mes randonnées préférées <HeartIcon className="icon-large"></HeartIcon></h1>
             {wishlists.length === 0 ? (
                 <p className='empty fst-italic'>Vous n'avez pas encore de randonnées préférées, n'hésitez pas à laisser libre cours à vos rêves...</p>
             ) : (
                 <>
-                    <ul className="wishlist-content m-auto p-2 wishlist-list ">
+                    <ul className="product-list container">
                         {
                             wishlists.map(wishlist => (
                                 <div key={wishlist.id} className='text-center mb-2'>
-                                    <WishListCard name={wishlist.product.name} price={wishlist.product.price} photo={wishlist.product.photo}></WishListCard>
-                                    <button type="button" className="btn btn-outline-dark" onClick={() => deleteWish(wishlist.id)}><TrashIcon className="icon"/></button>
+                                    <ProductCard name={wishlist.product.name} price={wishlist.product.price} photo={wishlist.product.photo} deleteWish={() => deleteWish(wishlist.id)}>                                   
+                                    </ProductCard>
                                 </div>
                             ))
                         }

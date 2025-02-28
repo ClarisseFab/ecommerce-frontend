@@ -128,7 +128,7 @@ h2 {
 }
 
 /* ProductList Css */
-.product-list, .wishlist-list {
+.product-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
@@ -138,7 +138,7 @@ h2 {
 /* ProductCard Css */
 .card-container {
   width: 350px; 
-  height: 350px; 
+  height: 325px; 
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -200,70 +200,70 @@ h2 {
 
 .price-card {
   display: inline-block;
-  padding: 10px 20px; /* Espacement autour du texte */
-  background-color: #f0f0f0; /* Couleur de fond de l'étiquette */
-  border-radius: 12px; /* Coins arrondis */
-  border: 2px solid #ccc; /* Bordure fine */
-  font-weight: bold; /* Pour avoir un texte plus marqué */
-  font-size: 16px; /* Taille du texte */
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .price-card p {
-  margin: 0; /* Pour supprimer les marges par défaut autour du paragraphe */
-  color: #333; /* Couleur du texte */
+  margin: 0;
+  color: #333;
 }
 
 .btn-book {
   display: inline-block;
-  padding: 10px 20px; /* Espacement interne */
-  background-color: #0B623B; /* Couleur de fond du bouton */
-  color: white; /* Couleur du texte */
-  font-size: 16px; /* Taille du texte */
-  font-weight: bold; /* Gras pour le texte */
-  text-align: center; /* Centrer le texte */
-  text-decoration: none; /* Retirer le souligné */
-  border-radius: 5px; /* Coins arrondis */
-  border: none; /* Pas de bordure */
-  cursor: pointer; /* Curseur pointer pour l'interactivité */
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Effet de transition */
+  padding: 10px 20px; 
+  background-color: #0B623B;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-book:hover {
-  background-color: #128752; /* Couleur de fond au survol */
-  transform: scale(1.05); /* Effet d'agrandissement léger au survol */
+  background-color: #128752;
+  transform: scale(1.05);
 }
 
 .btn-wish {
-  background-color: transparent; /* Pas de fond par défaut */
-  border: none; /* Aucune bordure */
-  padding: 10px; /* Espacement autour de l'icône */
-  cursor: pointer; /* Curseur pointer pour indiquer l'interactivité */
-  display: inline-flex; /* Pour aligner l'icône */
-  justify-content: center; /* Centrer l'icône */
-  align-items: center; /* Centrer l'icône */
-  transition: transform 0.3s ease, color 0.3s ease; /* Animation pour agrandissement et changement de couleur */
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .btn-wish:hover {
-  transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+  transform: scale(1.1);
 }
 
 .icon-heart {
-  fill: none; /* Couleur de l'icône par défaut */
-  transition: fill 0.3s ease; /* Animation de la couleur au survol */
+  fill: none;
+  transition: fill 0.3s ease;
   width: 24px;
   height: 24px;
 }
 
 .btn-wish:hover .icon-heart {
-  fill: #ff4081; /* Change la couleur de l'icône au survol */
+  fill: #ff4081; 
 }
 
 
 /* Wishlist */
-.wishlist-content {
+/* .wishlist-content {
   width: 650px; 
-}
+} */
 
 .wishlist-title {
   margin-left: 129px;
