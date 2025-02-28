@@ -40,7 +40,7 @@ function ProductShow() {
             'X-User-Email': process.env.REACT_APP_USER_EMAIL,
             'X-User-Token': process.env.REACT_APP_USER_TOKEN
         },
-        body: JSON.stringify({product_id: id})
+        body: JSON.stringify({product_id: id, quantity: 1})
       };
 
       const addToCart = () => {

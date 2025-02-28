@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
 function Wishlist({deleteWish, wishlists}) {
@@ -6,8 +7,10 @@ function Wishlist({deleteWish, wishlists}) {
             {
                 wishlists.map(wishlist => (
                     <div key={wishlist.id} className='text-center mb-2'>
-                        <ProductCard name={wishlist.product.name} price={wishlist.product.price} photo={wishlist.product.photo} deleteWish={() => deleteWish(wishlist.id)}>                                   
-                        </ProductCard>
+                        <NavLink to={`/products/${wishlist.product_id}`} className="text-decoration-none" key={wishlist.product_id}>
+                            <ProductCard name={wishlist.product.name} price={wishlist.product.price} photo={wishlist.product.photo} deleteWish={() => deleteWish(wishlist.id)}>                                   
+                            </ProductCard>
+                        </NavLink>
                     </div>
                 ))
             }

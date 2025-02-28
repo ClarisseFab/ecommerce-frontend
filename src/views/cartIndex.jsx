@@ -35,7 +35,8 @@ function cartIndex() {
         });
         }, []);
 
-    const totalPrice = shoppingCarts.reduce((sum, item) => sum + item.product.price, 0);
+    const firstTotalPrice = shoppingCarts.reduce((sum, item) => sum + item.product.price, 0);
+    const totalPrice = shoppingCarts.reduce((sum, item) => sum + (item.product.price * item.quantity), 0);
 
     const shoppingCartProductsIds = shoppingCarts.map(shoppingCart => ({product_id: shoppingCart.product_id}))
 
@@ -94,7 +95,7 @@ function cartIndex() {
             <p className='fst-italic empty'>Vous n'avez rien dans votre panier : retrouvez vos commandes passées en cliquant sur le bouton 'Mes commandes'- et, surtout - rejoignez nous vite pour l'aventure en réservant de nouvelles randonnées !</p>
              ) : (
                 <div className="shopping-cart ">
-                     <ShoppingCart shoppingCarts={shoppingCarts} totalPrice={totalPrice} handleOrder={handleOrder} deleteCart={deleteCart}></ShoppingCart>
+                     <ShoppingCart shoppingCarts={shoppingCarts} setShoppingCart={setShoppingCart} totalPrice={totalPrice} handleOrder={handleOrder} deleteCart={deleteCart} firstTotalPrice={firstTotalPrice}></ShoppingCart>
                 </div>
              )}
         <div>
