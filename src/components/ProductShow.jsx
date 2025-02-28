@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate} from 'react-router-dom';
-import { CalendarDaysIcon, ArrowTrendingUpIcon, RocketLaunchIcon, PhotoIcon, ClockIcon, HeartIcon, ShoppingCartIcon, CurrencyEuroIcon} from '@heroicons/react/24/outline';
+import { CalendarDaysIcon, ArrowTrendingUpIcon, RocketLaunchIcon, PhotoIcon, ClockIcon, HeartIcon, ShoppingCartIcon, CurrencyEuroIcon, ArrowLeftIcon} from '@heroicons/react/24/outline';
 import { toast } from 'react-toastify';
+import { NavLink } from 'react-router-dom';
 
 function ProductShow() {
   const { id } = useParams();
   const [product, setProduct] = useState(null)
   const [loading, setLoading] = useState(true);
-  const [cartClicked, setCart] = useState(false)
   const navigate = useNavigate();
 
   const notify = () => toast("Super, vous avez bien ajouté cette randonnée à vos randonnées préférées !");
@@ -70,6 +70,10 @@ function ProductShow() {
           .then(response => response.json())
           .then(function(data) {
             notify()
+            setProduct(prevProduct => ({
+              ...prevProduct,
+              wishlist: ['newItem'],
+            }));
       })
           .catch(function() {
               
@@ -80,11 +84,14 @@ function ProductShow() {
         loading ? (
             <p>Votre randonnée arrive !</p>
         ) : (
-            <div class="d-flex flex-column align-items-center justify-content-center pt-3 pb-5 bg-secondary-subtle">
+          <div className='bg-secondary-subtle' >
+            <NavLink className="simple-link" to="/" ><ArrowLeftIcon className="icon icon-back"/></NavLink>
+
+            <div class="d-flex flex-column align-items-center justify-content-center pt-3 pb-5 ">
               <div className="product-show d-flex justify-content-center container ">
                   <div>
-                    <h1>{product.name}  <button className="btn-wish" onClick={() => addToWishlist()}> <HeartIcon className="icon-heart"/> </button></h1>
-                    <p className='fst-italic'>{product.description}</p>
+                    <h1>{product.name}  <button className="btn-wish" onClick={() => addToWishlist()}> <HeartIcon className={product.wishlist.length === 1 ? 'icon-heart-full' : 'icon-heart'}/> </button></h1>
+                    <p className='fst-italic'>{JSON.parse(product.description)[0]}</p>
                     <h2>Détails</h2>
                     <p className='details'><strong><RocketLaunchIcon className="icon"/>Difficulté</strong> : {product.difficulty}</p>
                     <p className='details'><strong><ClockIcon className="icon"/>Durée</strong> : {product.duration} jours</p>
@@ -100,6 +107,7 @@ function ProductShow() {
                   <div className="img-container"><img src={`http://localhost:3000${product.photo}`} alt="photo de la randonnée"></img></div>
               </div>
             </div>
+          </div>
         )
     );
 }

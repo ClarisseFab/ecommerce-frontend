@@ -1,15 +1,14 @@
 import './App.css';
-import Header from './components/Header';
-import ProductList from './components/ProductList';
-import ProductShow from './components/ProductShow';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ShoppingCart from './components/ShoppingCart';
-import WishList from './components/Wishlist';
-import Orders from './components/Orders';
-import Footer from './components/Footer';
-import { ToastContainer } from 'react-toastify';
-import Index from './views/products/index'
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+
+import Index from './views/products/index'
+import CartIndex from './views/cartIndex'
+import WishListIndex from './views/wishlistIndex';
+import Header from './components/Header';
+import ProductShow from './components/ProductShow';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,9 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/products/:id" element={<ProductShow />} />
-        <Route path="/shopping_carts" element={<ShoppingCart />} />
-        <Route path="/wishlists" element={<WishList />} />
-        <Route path="/orders" element={<Orders />} />
+        <Route path="/shopping_carts" element={<CartIndex />} />
+        <Route path="/wishlists" element={<WishListIndex />} />
       </Routes>
       <Footer></Footer>
     </BrowserRouter>

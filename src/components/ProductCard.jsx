@@ -3,17 +3,6 @@ import { TrashIcon} from '@heroicons/react/24/outline';
 
 function ProductCard({name, price, duration, period, photo, quantity, deleteWish}) {
     return (
-      // <div className="card-container rounded">
-      //       <img src={`http://localhost:3000${photo}`} />
-      //       <div className="card-infos">
-      //           <div>
-      //           <h2>{name}</h2>
-      //           <p>{duration} jours</p>
-      //           <p>{period}</p>
-      //           </div>
-      //           <h2 className="card-pricing">{price}€</h2>
-      //       </div>
-      // </div>
       <div className="card-container rounded">
             {photo && (
               <img src={`http://localhost:3000${photo}`}/>)}

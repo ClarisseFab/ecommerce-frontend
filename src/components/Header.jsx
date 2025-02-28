@@ -1,5 +1,4 @@
 import '../App.css';
-import backgroundImage from '../assets/backgroundImage.jpg'
 import { NavLink } from 'react-router-dom';
 
 function Header() {
@@ -10,7 +9,7 @@ function Header() {
         <div>
             <ul className="d-flex justify-content-around bg-light-subtle rounded  py-3 px-5">
                 <li className="nav-item px-2">
-                    <NavLink className="nav-link" to="/" activeClassName="active">Toutes les randonnées</NavLink>
+                    <NavLink className="nav-link" to="/" activeclassname="active">Toutes les randonnées</NavLink>
                 </li>
                 <li className="nav-item px-2">
                     <NavLink className="nav-link" to="/wishlists" activeClassName="active">Mes randos pref</NavLink>
@@ -20,23 +19,6 @@ function Header() {
                 </li>
             </ul>
         </div>
-        {/* <div className="navbar navbar-expand-sm navbar-light navbar-lewagon rounded">
-            <div className="container-fluid">
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto">
-                        <li className="nav-item active">
-                            <Link className="nav-link" to="/products">Toutes les randonnées</Link>
-                        </li>
-                         <li className="nav-item">
-                            <Link className="nav-link" to="/wishlists">Mes randos pref</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/shopping_carts">Mon panier</Link>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> */}
       </header>
     );
   }

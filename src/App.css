@@ -1,43 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
 
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
 
 /* App utilities */
 .empty {
@@ -48,6 +11,19 @@
 
 ul {
   list-style-type: none;
+}
+
+h2 {
+  font-family: "Playwrite IT Moderna", serif;
+  font-weight: 100;
+}
+
+p, li {
+  font-family: "Nunito Sans", serif;
+}
+
+.p-big {
+  font-size: 18px;
 }
 
 /* Header  */
@@ -66,7 +42,7 @@ ul {
 }
 
 .header {
-  background-image: url('./assets/backgroundImage.jpg'); /* Chemin vers l'image */
+  background-image: url('./assets/backgroundImage.jpg');
   background-size: cover;
   background-position: center;
   height: 550px; 
@@ -84,14 +60,18 @@ ul {
 }
 
 .nav-link.active {
-    font-weight: bold; 
+  font-weight: bold; 
 }
 
-h2 {
-  font-family: "Playwrite IT Moderna", serif;
-  font-weight: 100;
+.icon-back {
+  color: black; 
+  margin-left: 32px;
+  margin-top: 12px; 
 }
 
+.icon-back:hover {
+  font-weight: bold; 
+}
 
 /* Footer */
 
@@ -143,7 +123,7 @@ h2 {
 /* ProductCard Css */
 .card-container {
   width: 350px; 
-  height: 325px; 
+  height: 335px; 
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -260,15 +240,16 @@ h2 {
   height: 24px;
 }
 
+.icon-heart-full {
+  fill: #ff4081;
+  transition: fill 0.3s ease;
+  width: 24px;
+  height: 24px;
+}
+
 .btn-wish:hover .icon-heart {
   fill: #ff4081; 
 }
-
-
-/* Wishlist */
-/* .wishlist-content {
-  width: 650px; 
-} */
 
 .wishlist-title {
   margin-left: 129px;
@@ -307,9 +288,3 @@ h2 {
   color: white;
   width: 1000px; 
 }
-
-/* Modal   */
-/* .modalback.blurred {
-  filter: blur(1.5rem); 
-  transition: filter 0.5s ease-in-out;
-} */
