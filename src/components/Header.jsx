@@ -1,22 +1,22 @@
 import '../App.css';
 import backgroundImage from '../assets/backgroundImage.jpg'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Header() {
     return (
       <header className="header rounded" >
-        <h1 className="header-title ">Découvrez nos plus belles rando's</h1>
+        <h1 className="header-title "><strong>Découvrez nos plus belles rando's</strong></h1>
 
         <div>
             <ul className="d-flex justify-content-around bg-light-subtle rounded  py-3 px-5">
-                <li className="nav-item px-2 active">
-                    <Link className="nav-link" to="/products">Toutes les randonnées</Link>
+                <li className="nav-item px-2">
+                    <NavLink className="nav-link" to="/" activeClassName="active">Toutes les randonnées</NavLink>
                 </li>
                 <li className="nav-item px-2">
-                    <Link className="nav-link" to="/wishlists">Mes randos pref</Link>
+                    <NavLink className="nav-link" to="/wishlists" activeClassName="active">Mes randos pref</NavLink>
                 </li>
                 <li className="nav-item px-2">
-                    <Link className="nav-link" to="/shopping_carts">Mon panier</Link>
+                    <NavLink className="nav-link" to="/shopping_carts" activeClassName="active">Mon panier</NavLink>
                 </li>
             </ul>
         </div>

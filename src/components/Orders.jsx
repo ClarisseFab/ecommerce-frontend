@@ -34,9 +34,9 @@ function Orders() {
             {
                 orders.map(order => (
                     <div key={order.id}>
-                        <h5>Le {order.date}:</h5>
-                        <p>{}</p>
-                        <p className='d-flex justify-content-between'>{order.total_price}€ <span className='border rounded bg-success p-1 text-white'>Payé</span> </p>
+                        <h5 className='d-flex justify-content-between align-items-center'>Le {order.date}:<span className='border rounded bg-success p-1 text-white fs-5'>Payée</span></h5>
+                        <p className='mb-0'>{order.order_products.length} article(s)</p>
+                        <p >{order.total_price}€</p>
                     </div>
                 )
                 )

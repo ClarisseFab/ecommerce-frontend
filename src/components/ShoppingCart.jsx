@@ -182,6 +182,8 @@ function ShoppingCart() {
         </div>
       )}
 
+{showModal && <div className="modal-backdrop fade show blurred"></div>}
+
     </div>
     
  

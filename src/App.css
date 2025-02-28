@@ -83,10 +83,15 @@ ul {
   font-weight: 400;
 }
 
+.nav-link.active {
+    font-weight: bold; 
+}
+
 h2 {
   font-family: "Playwrite IT Moderna", serif;
   font-weight: 100;
 }
+
 
 /* Footer */
 
@@ -295,3 +300,16 @@ h2 {
   height: 42px;
   margin-right: 8px;
 }
+
+/* Banner */
+.banner {
+  background-color: #144202;
+  color: white;
+  width: 1000px; 
+}
+
+/* Modal   */
+/* .modalback.blurred {
+  filter: blur(1.5rem); 
+  transition: filter 0.5s ease-in-out;
+} */
